@@ -1,0 +1,35 @@
+body{
+    background-color: #000000;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 400px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    border-radius: 7px;
+}
+img{
+    width: 100%;
+    border-radius: 7px;
+}
+.front{
+    width: 400px;
+    position: absolute;
+    backface-visibility: hidden;
+    z-index: 1;
+    border-radius: 7px;
+}
+.back{
+    width: 400px;
+    position: absolute;
+    transform: rotateY(180deg);
+    border-radius: 7px;
+}
+.card.active{
+    transform: perspective(500px) rotateY(180deg);
+}
